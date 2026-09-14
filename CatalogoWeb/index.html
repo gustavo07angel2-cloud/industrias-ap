@@ -17,7 +17,7 @@
     .nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.04em}.mark{display:grid;place-items:center;width:42px;height:42px;background:var(--white);color:var(--ink);font-size:18px;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%)}.brand small{display:block;color:var(--soft);font-size:10px;font-weight:700;letter-spacing:.18em;margin-top:-3px}
     .navlinks{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700}.navlinks a{color:#ddd7cf;transition:.2s}.navlinks a:hover{color:var(--accent)}.nav-cta{padding:10px 15px;border:1px solid var(--line)}
     .menu{display:none;background:none;border:0;color:white;font-size:26px;cursor:pointer}
-    .hero{min-height:760px;display:grid;align-items:end;padding:150px 0 76px;position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(8,8,7,.96) 0%,rgba(8,8,7,.78) 48%,rgba(8,8,7,.38) 100%),linear-gradient(0deg,var(--ink),transparent 45%),url("https://raw.githubusercontent.com/gustavo07angel2-cloud/industrias-ap/main/Frontend/src/assets/hero.png") center/cover no-repeat}
+    .hero{min-height:760px;display:grid;align-items:end;padding:150px 0 76px;position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(8,8,7,.96) 0%,rgba(8,8,7,.78) 48%,rgba(8,8,7,.38) 100%),linear-gradient(0deg,var(--ink),transparent 45%),url("IMG_20260903_100926816_HDR_AE.jpg") center/cover no-repeat}
     .hero::after{content:"";position:absolute;inset:76px 0 auto;z-index:-1;height:4px;background:linear-gradient(90deg,var(--accent) 0 24%,transparent 24%)}
     .hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.5fr);gap:60px;align-items:end}.eyebrow{display:flex;align-items:center;gap:12px;text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:800;color:var(--accent)}.eyebrow::before{content:"";width:38px;height:2px;background:currentColor}
     h1{font-size:clamp(58px,9vw,116px);line-height:.84;letter-spacing:-.065em;margin:24px 0 30px;max-width:850px;text-transform:uppercase}h1 span{display:block;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.75)}
@@ -26,16 +26,24 @@
     section{padding:110px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:46px}.section-head h2{font-size:clamp(38px,6vw,72px);line-height:.95;letter-spacing:-.05em;text-transform:uppercase;margin:10px 0 0}.section-head p{max-width:470px;color:var(--soft);margin:0}
     .services{background:var(--graphite);border-block:1px solid var(--line)}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}.service{min-height:280px;padding:28px;border-right:1px solid var(--line);position:relative;overflow:hidden}.service:last-child{border-right:0}.service-num{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.16em}.service h3{font-size:25px;line-height:1.1;margin:76px 0 14px}.service p{color:var(--soft);margin:0}.service::after{content:"↗";position:absolute;right:24px;top:20px;font-size:24px;color:#7a7063;transition:.3s}.service:hover::after{color:var(--accent);transform:translate(3px,-3px)}
     .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}.filter{border:1px solid var(--line);background:transparent;color:#d2cbc1;padding:10px 16px;cursor:pointer;font-weight:750}.filter.active,.filter:hover{background:var(--white);border-color:var(--white);color:var(--ink)}
-    .project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.project{grid-column:span 6;min-height:420px;border:1px solid var(--line);position:relative;overflow:hidden;background:var(--panel);display:flex;align-items:flex-end;isolation:isolate}.project:nth-child(3),.project:nth-child(4){grid-column:span 6}.project-art{position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 20% 20%,rgba(198,161,91,.18),transparent 25%),linear-gradient(135deg,#26231f,#11100e 68%)}.project-art::before{content:"";position:absolute;inset:11%;border:1px solid rgba(255,255,255,.15);box-shadow:34px 34px 0 -1px #191714,34px 34px 0 0 rgba(198,161,91,.14)}.project-art::after{content:"AP";position:absolute;right:8%;top:0;font-size:180px;line-height:1;color:rgba(255,255,255,.035);font-weight:950}.project:nth-child(even) .project-art{background:radial-gradient(circle at 80% 15%,rgba(198,161,91,.12),transparent 23%),linear-gradient(145deg,#1d1b18,#090909)}.project-overlay{width:100%;padding:90px 28px 26px;background:linear-gradient(transparent,rgba(6,7,8,.94))}.tag{color:var(--accent);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.16em}.project h3{margin:6px 0 14px;font-size:28px}.project p{color:#bbb3a8;margin:0 0 20px}.play{display:inline-flex;align-items:center;gap:10px;background:transparent;border:0;color:white;padding:0;font-weight:850;cursor:pointer}.play i{font-style:normal;display:grid;place-items:center;width:42px;height:42px;border:1px solid #fff;border-radius:50%;transition:.2s}.play:hover i{background:var(--accent);color:var(--ink);border-color:var(--accent);transform:scale(1.06)}
-    .project[hidden]{display:none}.process{background:#e9e4da;color:#17140f}.process .eyebrow{color:#806536}.process .section-head p{color:#5d5850}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#cfc5b7;border:1px solid #cfc5b7}.step{background:#e9e4da;padding:34px}.step b{font-size:52px;line-height:1;color:#cbbdAA}.step h3{font-size:22px;margin:30px 0 10px}.step p{color:#625c53;margin:0}
+    .project-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:330px;gap:16px}
+    .project{grid-column:span 4;border:1px solid var(--line);position:relative;overflow:hidden;background:var(--panel);isolation:isolate}
+    .project.featured{grid-column:span 8}.project img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .4s}.project:hover img{transform:scale(1.045);filter:brightness(.72)}
+    .project-overlay{position:absolute;inset:auto 0 0;padding:65px 22px 20px;background:linear-gradient(transparent,rgba(7,7,6,.94));transform:translateY(7px);transition:.3s}.project:hover .project-overlay{transform:none}
+    .tag{color:var(--accent);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.16em}.project h3{margin:5px 0 10px;font-size:23px}.project p{color:#c2bbb1;margin:0;font-size:14px}
+    .zoom{position:absolute;right:18px;top:18px;display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(255,255,255,.6);background:rgba(8,8,7,.55);color:white;border-radius:50%;font-size:20px;cursor:pointer;opacity:0;transform:scale(.86);transition:.25s;backdrop-filter:blur(8px)}.project:hover .zoom,.project:focus-within .zoom{opacity:1;transform:none}.zoom:hover{background:var(--accent);border-color:var(--accent);color:#111}
+    .project[hidden]{display:none}.video-heading{display:flex;justify-content:space-between;align-items:end;gap:25px;margin:74px 0 24px}.video-heading h3{font-size:clamp(28px,4vw,44px);line-height:1;margin:0;text-transform:uppercase;letter-spacing:-.035em}.video-heading p{margin:0;color:var(--soft);max-width:430px}
+    .video-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.video-card{position:relative;min-height:270px;border:1px solid var(--line);overflow:hidden;background:#161512;cursor:pointer;color:white;text-align:left;padding:0}.video-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.42) saturate(.72);transition:.45s}.video-card:hover img{transform:scale(1.05);filter:brightness(.3) saturate(.85)}.video-card span{position:absolute;left:18px;bottom:18px;right:18px;font-weight:850;font-size:18px;z-index:1}.video-card i{position:absolute;left:18px;top:18px;z-index:1;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#111;font-style:normal;transition:.25s}.video-card:hover i{transform:scale(1.08)}
+    .image-box{width:min(1040px,100%);height:min(86vh,800px);background:#0b0b0a}.image-box img{width:100%;height:100%;object-fit:contain;display:block}
+    .process{background:#e9e4da;color:#17140f}.process .eyebrow{color:#806536}.process .section-head p{color:#5d5850}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#cfc5b7;border:1px solid #cfc5b7}.step{background:#e9e4da;padding:34px}.step b{font-size:52px;line-height:1;color:#cbbdAA}.step h3{font-size:22px;margin:30px 0 10px}.step p{color:#625c53;margin:0}
     .reels-note{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:28px;padding:22px;border:1px solid var(--line);color:var(--soft)}.reels-note strong{color:white}.reels-note a{color:var(--accent);font-weight:800}
     .contact{padding-bottom:80px}.contact-card{position:relative;overflow:hidden;background:#e8e1d5;color:#13110e;box-shadow:inset 0 4px 0 var(--accent);padding:clamp(32px,7vw,82px);display:grid;grid-template-columns:1.25fr .75fr;align-items:end;gap:50px}.contact-card::after{content:"AP";position:absolute;right:-20px;top:-55px;font-weight:950;font-size:260px;line-height:1;color:rgba(0,0,0,.055)}.contact h2{font-size:clamp(42px,7vw,84px);line-height:.9;letter-spacing:-.06em;text-transform:uppercase;margin:0 0 20px}.contact p{font-size:18px;margin:0;max-width:560px}.contact-info{position:relative;z-index:1;border-left:1px solid rgba(0,0,0,.3);padding-left:28px}.contact-info a{display:block;font-size:20px;font-weight:900;margin:8px 0}.contact-info span{display:block;margin-top:18px;font-weight:700}
     footer{border-top:1px solid var(--line);padding:30px 0 46px;color:#928a80}.footer-row{display:flex;justify-content:space-between;gap:20px}.socials{display:flex;gap:18px}.socials a:hover{color:white}
     .whatsapp{position:fixed;right:22px;bottom:22px;z-index:25;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:#25d366;color:white;box-shadow:0 12px 38px rgba(0,0,0,.42);font-size:25px;font-weight:900;transition:.2s}.whatsapp:hover{transform:translateY(-3px) scale(1.03)}
     .modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:18px;background:rgba(0,0,0,.88);backdrop-filter:blur(8px)}.modal.open{display:grid}.modal-box{position:relative;width:min(520px,100%);height:min(82vh,760px);background:#181714;border:1px solid #51483c}.modal iframe{width:100%;height:100%;border:0}.close{position:absolute;right:-12px;top:-12px;z-index:2;width:42px;height:42px;border:1px solid #555;background:#0c0e10;color:white;border-radius:50%;font-size:22px;cursor:pointer}
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.in{opacity:1;transform:none}
-    @media(max-width:900px){.navlinks{position:absolute;top:76px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;padding:20px;background:#0d0f11;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr}.hero{min-height:720px}.hero-note{display:none}.service-grid{grid-template-columns:repeat(2,1fr)}.service:nth-child(2){border-right:0}.service:nth-child(-n+2){border-bottom:1px solid var(--line)}.project{grid-column:span 12!important}.contact-card{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.contact-info{border-left:0;border-top:1px solid rgba(0,0,0,.28);padding:22px 0 0}}
-    @media(max-width:580px){.wrap{width:min(100% - 24px,var(--max))}.nav{height:68px}.hero{padding:120px 0 54px}.hero::after{top:68px}h1{font-size:54px}.hero-copy{font-size:16px}.actions .btn{width:100%}section{padding:78px 0}.section-head{display:block}.section-head p{margin-top:20px}.service-grid{grid-template-columns:1fr}.service{min-height:220px;border-right:0!important;border-bottom:1px solid var(--line)}.service:last-child{border-bottom:0}.service h3{margin-top:42px}.project{min-height:390px}.reels-note{align-items:flex-start;flex-direction:column}.footer-row{flex-direction:column}.contact-card{padding:34px 24px}}
+    @media(max-width:900px){.project{grid-column:span 6!important}.video-grid{grid-template-columns:repeat(2,1fr)}.navlinks{position:absolute;top:76px;left:0;right:0;display:none;flex-direction:column;align-items:stretch;padding:20px;background:#0d0f11;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.hero-grid{grid-template-columns:1fr}.hero{min-height:720px}.hero-note{display:none}.service-grid{grid-template-columns:repeat(2,1fr)}.service:nth-child(2){border-right:0}.service:nth-child(-n+2){border-bottom:1px solid var(--line)}.project{grid-column:span 12!important}.contact-card{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.contact-info{border-left:0;border-top:1px solid rgba(0,0,0,.28);padding:22px 0 0}}
+    @media(max-width:580px){.project-grid{display:block}.project{min-height:340px;margin-bottom:14px}.video-grid{grid-template-columns:1fr}.video-card{min-height:230px}.video-heading{display:block}.video-heading p{margin-top:12px}.wrap{width:min(100% - 24px,var(--max))}.nav{height:68px}.hero{padding:120px 0 54px}.hero::after{top:68px}h1{font-size:54px}.hero-copy{font-size:16px}.actions .btn{width:100%}section{padding:78px 0}.section-head{display:block}.section-head p{margin-top:20px}.service-grid{grid-template-columns:1fr}.service{min-height:220px;border-right:0!important;border-bottom:1px solid var(--line)}.service:last-child{border-bottom:0}.service h3{margin-top:42px}.project{min-height:390px}.reels-note{align-items:flex-start;flex-direction:column}.footer-row{flex-direction:column}.contact-card{padding:34px 24px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
   </style>
 </head>
@@ -91,23 +99,78 @@
         <div class="filters reveal" role="group" aria-label="Filtrar proyectos">
           <button class="filter active" data-filter="all">Todos</button>
           <button class="filter" data-filter="cocinas">Cocinas</button>
-          <button class="filter" data-filter="dormitorios">Dormitorios</button>
-          <button class="filter" data-filter="entretenimiento">Entretenimiento</button>
-          <button class="filter" data-filter="otros">Otros</button>
+          <button class="filter" data-filter="banos">Baños</button>
+          <button class="filter" data-filter="comerciales">Comerciales</button>
+          <button class="filter" data-filter="especiales">Especiales</button>
         </div>
         <div class="project-grid">
+          <article class="project featured reveal" data-category="comerciales">
+            <img src="IMG_20260903_100926816_HDR_AE.jpg" alt="Mostrador comercial verde con vitrina para D'Or Botan" loading="lazy">
+            <button class="zoom" aria-label="Ampliar mostrador D'Or Botan" data-image="IMG_20260903_100926816_HDR_AE.jpg" data-alt="Mostrador comercial D'Or Botan">＋</button>
+            <div class="project-overlay"><span class="tag">Comercial</span><h3>Mostrador D'Or Botan</h3><p>Frente ranurado, iluminación inferior y vitrina integrada.</p></div>
+          </article>
           <article class="project reveal" data-category="cocinas">
-            <div class="project-art"></div><div class="project-overlay"><span class="tag">Cocinas</span><h3>Cocina integral a medida</h3><p>Diseño funcional con módulos fabricados para el espacio disponible.</p><button class="play" data-reel="https://www.facebook.com/reel/998740752572441"><i>▶</i> Ver proyecto</button></div>
+            <img src="482103765_122179654190275561_6262593266736215696_n.jpg" alt="Cocina integral en tono wengué" loading="lazy">
+            <button class="zoom" aria-label="Ampliar cocina wengué" data-image="482103765_122179654190275561_6262593266736215696_n.jpg" data-alt="Cocina integral en wengué">＋</button>
+            <div class="project-overlay"><span class="tag">Cocina</span><h3>Cocina integral wengué</h3><p>Módulos superiores e inferiores con amplio almacenamiento.</p></div>
           </article>
-          <article class="project reveal" data-category="dormitorios">
-            <div class="project-art"></div><div class="project-overlay"><span class="tag">Dormitorios</span><h3>Almacenamiento personalizado</h3><p>Soluciones que combinan capacidad, orden y una apariencia limpia.</p><button class="play" data-reel="https://www.facebook.com/reel/1276577594678987"><i>▶</i> Ver proyecto</button></div>
+          <article class="project reveal" data-category="cocinas">
+            <img src="481770658_122179654220275561_8537373676545371792_n.jpg" alt="Cocina compacta blanca con top tipo mármol" loading="lazy">
+            <button class="zoom" aria-label="Ampliar cocina blanca" data-image="481770658_122179654220275561_8537373676545371792_n.jpg" data-alt="Cocina compacta blanca">＋</button>
+            <div class="project-overlay"><span class="tag">Cocina</span><h3>Cocina compacta blanca</h3><p>Distribución en esquina con repisas curvas y top tipo mármol.</p></div>
           </article>
-          <article class="project reveal" data-category="entretenimiento">
-            <div class="project-art"></div><div class="project-overlay"><span class="tag">Entretenimiento</span><h3>Mueble protagonista</h3><p>Paneles, iluminación y almacenamiento integrados en una sola propuesta.</p><button class="play" data-reel="https://www.facebook.com/reel/3188273254703222"><i>▶</i> Ver proyecto</button></div>
+          <article class="project featured reveal" data-category="comerciales">
+            <img src="IMG_20260826_122047130_HDR_AE.jpg" alt="Mostrador comercial verde y blanco visto desde el interior" loading="lazy">
+            <button class="zoom" aria-label="Ampliar mostrador comercial" data-image="IMG_20260826_122047130_HDR_AE.jpg" data-alt="Mostrador comercial verde y blanco">＋</button>
+            <div class="project-overlay"><span class="tag">Comercial</span><h3>Área de atención personalizada</h3><p>Mostrador en L con cajones, repisas y acabado ranurado.</p></div>
           </article>
-          <article class="project reveal" data-category="otros">
-            <div class="project-art"></div><div class="project-overlay"><span class="tag">Personalizado</span><h3>Fabricación especial</h3><p>Una pieza diseñada desde cero para resolver una necesidad concreta.</p><button class="play" data-reel="https://www.facebook.com/reel/722536150471347"><i>▶</i> Ver proyecto</button></div>
+          <article class="project reveal" data-category="cocinas">
+            <img src="486549917_122185668140275561_6463903416041036542_n.jpg" alt="Cocina integral en madera cálida y top blanco" loading="lazy">
+            <button class="zoom" aria-label="Ampliar cocina en madera" data-image="486549917_122185668140275561_6463903416041036542_n.jpg" data-alt="Cocina integral en madera cálida">＋</button>
+            <div class="project-overlay"><span class="tag">Cocina</span><h3>Cocina en tono madera</h3><p>Diseño en L con isla auxiliar y superficies claras.</p></div>
           </article>
+          <article class="project reveal" data-category="especiales">
+            <img src="IMG_20251022_155532678.jpg" alt="Panel ranurado con repisas blancas e iluminación LED" loading="lazy">
+            <button class="zoom" aria-label="Ampliar panel decorativo" data-image="IMG_20251022_155532678.jpg" data-alt="Panel ranurado con iluminación LED">＋</button>
+            <div class="project-overlay"><span class="tag">Especial</span><h3>Panel con iluminación LED</h3><p>Repisas flotantes y cajones sobre fondo ranurado.</p></div>
+          </article>
+          <article class="project reveal" data-category="banos">
+            <img src="IMG_20251129_114603058_HDR.jpg" alt="Dos muebles grises para lavamanos con cajones" loading="lazy">
+            <button class="zoom" aria-label="Ampliar muebles de baño" data-image="IMG_20251129_114603058_HDR.jpg" data-alt="Muebles grises para baño">＋</button>
+            <div class="project-overlay"><span class="tag">Baño</span><h3>Muebles de lavamanos</h3><p>Puertas, cajones laterales y herrajes negros.</p></div>
+          </article>
+          <article class="project featured reveal" data-category="comerciales">
+            <img src="IMG_20260826_122053087_AE.jpg" alt="Interior de mostrador comercial con repisas y cajones" loading="lazy">
+            <button class="zoom" aria-label="Ampliar interior del mostrador" data-image="IMG_20260826_122053087_AE.jpg" data-alt="Almacenamiento interior del mostrador">＋</button>
+            <div class="project-overlay"><span class="tag">Comercial</span><h3>Almacenamiento interior</h3><p>Repisas abiertas, gavetas y espacio de trabajo continuo.</p></div>
+          </article>
+          <article class="project reveal" data-category="cocinas">
+            <img src="605141091_122225529920275561_234611509579457869_n.jpg" alt="Cocina oscura con barra blanca" loading="lazy">
+            <button class="zoom" aria-label="Ampliar cocina con barra" data-image="605141091_122225529920275561_234611509579457869_n.jpg" data-alt="Cocina oscura con barra blanca">＋</button>
+            <div class="project-overlay"><span class="tag">Cocina</span><h3>Cocina con barra</h3><p>Módulos oscuros, barra clara y detalles de piedra.</p></div>
+          </article>
+          <article class="project reveal" data-category="banos">
+            <img src="IMG_20260604_105202172_HDR_AE.jpg" alt="Mueble de baño color madera con lavamanos redondo" loading="lazy">
+            <button class="zoom" aria-label="Ampliar mueble de baño" data-image="IMG_20260604_105202172_HDR_AE.jpg" data-alt="Mueble de baño con lavamanos redondo">＋</button>
+            <div class="project-overlay"><span class="tag">Baño</span><h3>Lavamanos sobrepuesto</h3><p>Mueble compacto en tono nogal con top claro.</p></div>
+          </article>
+          <article class="project reveal" data-category="especiales">
+            <img src="IMG_20260421_123931561.jpg" alt="Repisa geométrica personalizada en proceso de fabricación" loading="lazy">
+            <button class="zoom" aria-label="Ampliar repisa geométrica" data-image="IMG_20260421_123931561.jpg" data-alt="Repisa geométrica personalizada">＋</button>
+            <div class="project-overlay"><span class="tag">Especial</span><h3>Repisa geométrica</h3><p>Composición asimétrica fabricada a medida.</p></div>
+          </article>
+          <article class="project reveal" data-category="especiales">
+            <img src="IMG_20260515_150850268_HDR_AE.jpg" alt="Mueble alto de madera con repisas abiertas" loading="lazy">
+            <button class="zoom" aria-label="Ampliar mueble de almacenamiento" data-image="IMG_20260515_150850268_HDR_AE.jpg" data-alt="Mueble alto con repisas">＋</button>
+            <div class="project-overlay"><span class="tag">Especial</span><h3>Almacenamiento vertical</h3><p>Diseño abierto con divisiones para organizar y exhibir.</p></div>
+          </article>
+        </div>
+        <div class="video-heading reveal"><h3>Proyectos en video</h3><p>Cuatro recorridos publicados por Industrias AP para ver los muebles con más detalle.</p></div>
+        <div class="video-grid reveal">
+          <button class="video-card play" data-reel="https://www.facebook.com/reel/998740752572441"><img src="481770658_122179654220275561_8537373676545371792_n.jpg" alt="" loading="lazy"><i>▶</i><span>Proyecto en video 01</span></button>
+          <button class="video-card play" data-reel="https://www.facebook.com/reel/1276577594678987"><img src="482103765_122179654190275561_6262593266736215696_n.jpg" alt="" loading="lazy"><i>▶</i><span>Proyecto en video 02</span></button>
+          <button class="video-card play" data-reel="https://www.facebook.com/reel/3188273254703222"><img src="IMG_20260826_122047130_HDR_AE.jpg" alt="" loading="lazy"><i>▶</i><span>Proyecto en video 03</span></button>
+          <button class="video-card play" data-reel="https://www.facebook.com/reel/722536150471347"><img src="IMG_20251022_155532678.jpg" alt="" loading="lazy"><i>▶</i><span>Proyecto en video 04</span></button>
         </div>
         <div class="reels-note reveal"><span><strong>Más trabajos en Facebook.</strong> Los videos se reproducen desde la publicación original de Industrias AP.</span><a href="https://www.facebook.com/reel/998740752572441" target="_blank" rel="noopener">Abrir Facebook ↗</a></div>
       </div>
@@ -145,6 +208,10 @@
   <footer><div class="wrap footer-row"><span>© <span id="year"></span> Industrias AP. Huehuetenango.</span><div class="socials"><a href="https://wa.me/50250066630" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.facebook.com/reel/998740752572441" target="_blank" rel="noopener">Facebook</a></div></div></footer>
   <a class="whatsapp" href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20quiero%20cotizar%20un%20mueble." aria-label="Escribir por WhatsApp" target="_blank" rel="noopener">W</a>
 
+  <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-label="Fotografía ampliada">
+    <div class="modal-box image-box"><button class="close image-close" aria-label="Cerrar fotografía">×</button><img src="" alt=""></div>
+  </div>
+
   <div class="modal" id="reelModal" role="dialog" aria-modal="true" aria-label="Proyecto en video">
     <div class="modal-box"><button class="close" aria-label="Cerrar video">×</button><iframe title="Reel de Industrias AP" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div>
   </div>
@@ -155,10 +222,14 @@
     nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");menu.setAttribute("aria-expanded","false");menu.textContent="☰"}));
     const filters=document.querySelectorAll(".filter"),projects=document.querySelectorAll(".project");
     filters.forEach(btn=>btn.addEventListener("click",()=>{filters.forEach(x=>x.classList.remove("active"));btn.classList.add("active");const cat=btn.dataset.filter;projects.forEach(card=>card.hidden=cat!=="all"&&card.dataset.category!==cat)}));
+    const imageModal=document.getElementById("imageModal"),imageFrame=imageModal.querySelector("img"),imageClose=imageModal.querySelector(".image-close");
+    function closeImage(){imageModal.classList.remove("open");imageFrame.src="";document.body.style.overflow=""}
+    document.querySelectorAll(".zoom").forEach(btn=>btn.addEventListener("click",()=>{imageFrame.src=btn.dataset.image;imageFrame.alt=btn.dataset.alt||"Proyecto de Industrias AP";imageModal.classList.add("open");document.body.style.overflow="hidden";imageClose.focus()}));
+    imageClose.addEventListener("click",closeImage);imageModal.addEventListener("click",e=>{if(e.target===imageModal)closeImage()});
     const modal=document.getElementById("reelModal"),frame=modal.querySelector("iframe"),closeBtn=modal.querySelector(".close");
     function closeModal(){modal.classList.remove("open");frame.src="";document.body.style.overflow=""}
     document.querySelectorAll(".play").forEach(btn=>btn.addEventListener("click",()=>{const src="https://www.facebook.com/plugins/video.php?href="+encodeURIComponent(btn.dataset.reel)+"&show_text=false&width=500";frame.src=src;modal.classList.add("open");document.body.style.overflow="hidden";closeBtn.focus()}));
-    closeBtn.addEventListener("click",closeModal);modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+    closeBtn.addEventListener("click",closeModal);modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();closeImage()}});
     const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
     document.querySelectorAll(".reveal").forEach(el=>io.observe(el));document.getElementById("year").textContent=new Date().getFullYear();
   </script>
