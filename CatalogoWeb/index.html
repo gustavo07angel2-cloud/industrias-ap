@@ -1,1606 +1,218 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0e0d0b">
-  <meta name="description" content="Industrias AP: fabricación de cocinas integrales, closets, muebles de baño y mobiliario comercial a medida en Huehuetenango, Guatemala.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d0f">
+  <meta name="description" content="Diseño, fabricación e instalación de muebles a medida en Huehuetenango. Cocinas, clósets, lavamanos y proyectos personalizados.">
+  <meta property="og:title" content="Industrias AP | Muebles a medida">
+  <meta property="og:description" content="Creamos mobiliario que transforma espacios. Diseño y fabricación en Huehuetenango, Guatemala.">
+  <meta property="og:image" content="assets/projects/estacion-venta-principal.webp">
   <title>Industrias AP | Muebles a medida en Huehuetenango</title>
-  <link rel="preconnect" href="https://www.facebook.com">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23141311'/%3E%3Cpath d='M13 47 27 16h10l14 31H40l-2-6H25l-2 6zm15-15h7l-3-9z' fill='%23f3efe8'/%3E%3C/svg%3E">
-  <style>
-    :root {
-      --bg: #0e0d0b;
-      --surface: #151411;
-      --surface-2: #1c1a16;
-      --line: #2c2822;
-      --line-light: #3d372f;
-      --text: #f3efe8;
-      --muted: #b0a89c;
-      --soft: #857d72;
-      --accent: #c59f59;
-      --accent-hover: #d6b26d;
-      --cream-bg: #ebe5da;
-      --cream-card: #f4efe6;
-      --cream-text: #181511;
-      --cream-muted: #5a534a;
-      --max: 1180px;
-      --radius: 6px;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-    .wrap { width: min(var(--max), calc(100% - 40px)); margin: 0 auto; }
-
-    /* Navegación superior */
-    .topbar {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 30;
-      background: rgba(14, 13, 11, 0.92);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
-    }
-    .nav {
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-    }
-    .mark {
-      display: grid;
-      place-items: center;
-      width: 38px;
-      height: 38px;
-      background: var(--text);
-      color: var(--bg);
-      font-size: 15px;
-      font-weight: 900;
-      border-radius: 4px;
-    }
-    .brand small {
-      display: block;
-      color: var(--muted);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      margin-top: -2px;
-    }
-    .navlinks {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .navlinks a {
-      color: var(--muted);
-      transition: color 0.2s ease;
-    }
-    .navlinks a:hover { color: var(--text); }
-    .nav-cta {
-      padding: 8px 14px;
-      border: 1px solid var(--line-light);
-      border-radius: var(--radius);
-      color: var(--text) !important;
-      transition: border-color 0.2s ease, background 0.2s ease;
-    }
-    .nav-cta:hover {
-      border-color: var(--accent);
-      background: rgba(197, 159, 89, 0.08);
-    }
-    .menu {
-      display: none;
-      background: none;
-      border: 0;
-      color: var(--text);
-      font-size: 24px;
-      cursor: pointer;
-    }
-
-    /* Portada / Hero */
-    .hero {
-      min-height: 680px;
-      display: flex;
-      align-items: flex-end;
-      padding: 140px 0 80px;
-      position: relative;
-      isolation: isolate;
-      background:
-        linear-gradient(90deg, rgba(14, 13, 11, 0.94) 0%, rgba(14, 13, 11, 0.78) 52%, rgba(14, 13, 11, 0.42) 100%),
-        linear-gradient(0deg, var(--bg) 0%, transparent 35%),
-        url("IMG_20260903_100926816_HDR_AE.jpg") center / cover no-repeat;
-      border-bottom: 1px solid var(--line);
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
-      gap: 48px;
-      align-items: end;
-    }
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 12px;
-      font-weight: 700;
-      color: var(--accent);
-    }
-    .eyebrow::before {
-      content: "";
-      width: 28px;
-      height: 2px;
-      background: currentColor;
-    }
-    h1 {
-      font-size: clamp(38px, 5.6vw, 68px);
-      line-height: 1.04;
-      letter-spacing: -0.03em;
-      margin: 18px 0 22px;
-      max-width: 720px;
-      font-weight: 800;
-    }
-    h1 span {
-      color: var(--accent);
-    }
-    .hero-copy {
-      font-size: 17px;
-      color: #d6d0c6;
-      max-width: 580px;
-      margin: 0;
-    }
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 48px;
-      padding: 0 22px;
-      border: 1px solid var(--line-light);
-      border-radius: var(--radius);
-      font-weight: 700;
-      font-size: 14px;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #12100d;
-    }
-    .btn-primary:hover {
-      background: var(--accent-hover);
-      border-color: var(--accent-hover);
-      transform: translateY(-1px);
-    }
-    .btn-ghost {
-      background: rgba(21, 20, 17, 0.65);
-    }
-    .btn-ghost:hover {
-      border-color: var(--text);
-      background: rgba(255, 255, 255, 0.06);
-    }
-    .hero-note {
-      background: rgba(21, 20, 17, 0.82);
-      border: 1px solid var(--line-light);
-      border-left: 3px solid var(--accent);
-      border-radius: var(--radius);
-      padding: 22px 24px;
-      color: var(--muted);
-      backdrop-filter: blur(8px);
-    }
-    .hero-note strong {
-      display: block;
-      color: var(--text);
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
-    .hero-note p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.55;
-    }
-
-    /* Secciones generales */
-    section { padding: 92px 0; }
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-      align-items: flex-end;
-      margin-bottom: 42px;
-    }
-    .section-head h2 {
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-      margin: 10px 0 0;
-      font-weight: 800;
-    }
-    .section-head p {
-      max-width: 480px;
-      color: var(--muted);
-      margin: 0;
-      font-size: 15px;
-    }
-
-    /* Servicios */
-    .services {
-      background: var(--surface);
-      border-bottom: 1px solid var(--line);
-    }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-    .service {
-      background: var(--bg);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 26px 24px;
-      transition: border-color 0.2s ease;
-    }
-    .service:hover {
-      border-color: var(--line-light);
-    }
-    .service-num {
-      display: inline-block;
-      font-size: 12px;
-      color: var(--accent);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      margin-bottom: 14px;
-    }
-    .service h3 {
-      font-size: 20px;
-      line-height: 1.25;
-      margin: 0 0 10px;
-    }
-    .service p {
-      color: var(--muted);
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* Filtros de Proyectos */
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 28px;
-    }
-    .filter {
-      border: 1px solid var(--line-light);
-      border-radius: var(--radius);
-      background: var(--surface);
-      color: var(--muted);
-      padding: 9px 16px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-    .filter:hover {
-      color: var(--text);
-      border-color: var(--muted);
-    }
-    .filter.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #12100d;
-      font-weight: 700;
-    }
-
-    /* Cuadrícula de Proyectos limpia y legible */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-    .project {
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--surface);
-      cursor: pointer;
-      transition: border-color 0.25s ease, transform 0.25s ease;
-    }
-    .project:hover {
-      border-color: var(--line-light);
-      transform: translateY(-3px);
-    }
-    .project:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-    }
-    .project[hidden] { display: none; }
-
-    .project-media {
-      position: relative;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background: #0b0a09;
-    }
-    .project-media img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    .project:hover .project-media img {
-      transform: scale(1.03);
-    }
-    .project-badge {
-      position: absolute;
-      left: 12px;
-      top: 12px;
-      background: rgba(14, 13, 11, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: 4px 10px;
-      border-radius: 4px;
-      backdrop-filter: blur(6px);
-    }
-    .zoom-hint {
-      position: absolute;
-      right: 12px;
-      bottom: 12px;
-      background: rgba(14, 13, 11, 0.82);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: var(--text);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 5px 10px;
-      border-radius: 4px;
-      opacity: 0;
-      transform: translateY(4px);
-      transition: opacity 0.2s ease, transform 0.2s ease;
-      backdrop-filter: blur(6px);
-    }
-    .project:hover .zoom-hint {
-      opacity: 1;
-      transform: none;
-    }
-
-    .project-body {
-      padding: 20px 20px 18px;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-    .project-body h3 {
-      margin: 0 0 8px;
-      font-size: 19px;
-      line-height: 1.25;
-      color: var(--text);
-    }
-    .project-body p {
-      color: var(--muted);
-      margin: 0 0 16px;
-      font-size: 14px;
-      line-height: 1.58;
-      flex: 1;
-    }
-    .project-specs {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-      font-size: 12px;
-      color: var(--soft);
-    }
-    .project-specs span:last-child {
-      color: var(--accent);
-      font-weight: 600;
-      white-space: nowrap;
-    }
-
-    /* Videos */
-    .video-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 24px;
-      margin: 72px 0 24px;
-    }
-    .video-heading h3 {
-      font-size: clamp(24px, 3.2vw, 34px);
-      line-height: 1.1;
-      margin: 0;
-      font-weight: 800;
-    }
-    .video-heading p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 440px;
-      font-size: 14px;
-    }
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-    .video-card {
-      position: relative;
-      min-height: 250px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
-      background: var(--surface);
-      cursor: pointer;
-      color: var(--text);
-      text-align: left;
-      padding: 0;
-    }
-    .video-card img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.55);
-      transition: transform 0.4s ease, filter 0.3s ease;
-    }
-    .video-card:hover img {
-      transform: scale(1.04);
-      filter: brightness(0.42);
-    }
-    .video-card .video-info {
-      position: absolute;
-      left: 16px;
-      bottom: 16px;
-      right: 16px;
-      z-index: 1;
-    }
-    .video-card .video-info strong {
-      display: block;
-      font-size: 16px;
-      margin-bottom: 2px;
-    }
-    .video-card .video-info small {
-      color: #d3cdc3;
-      font-size: 12px;
-    }
-    .video-card i {
-      position: absolute;
-      left: 16px;
-      top: 16px;
-      z-index: 1;
-      display: grid;
-      place-items: center;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #111;
-      font-style: normal;
-      font-size: 14px;
-      transition: transform 0.2s ease;
-    }
-    .video-card:hover i { transform: scale(1.08); }
-
-    .reels-note {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      margin-top: 22px;
-      padding: 18px 22px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--surface);
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .reels-note strong { color: var(--text); }
-    .reels-note a { color: var(--accent); font-weight: 700; white-space: nowrap; }
-    .reels-note a:hover { text-decoration: underline; }
-
-    /* Proceso */
-    .process {
-      background: var(--cream-bg);
-      color: var(--cream-text);
-    }
-    .process .eyebrow { color: #7c602e; }
-    .process .section-head p { color: var(--cream-muted); }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-    .step {
-      background: var(--cream-card);
-      border: 1px solid #d7cebf;
-      border-radius: var(--radius);
-      padding: 30px 26px;
-    }
-    .step b {
-      display: inline-block;
-      font-size: 14px;
-      font-weight: 800;
-      color: #7c602e;
-      background: #e6dccb;
-      padding: 4px 10px;
-      border-radius: 4px;
-    }
-    .step h3 {
-      font-size: 20px;
-      margin: 18px 0 8px;
-    }
-    .step p {
-      color: var(--cream-muted);
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* Contacto */
-    .contact { padding-bottom: 80px; }
-    .contact-card {
-      background: var(--surface-2);
-      border: 1px solid var(--line-light);
-      border-top: 3px solid var(--accent);
-      border-radius: var(--radius);
-      padding: clamp(28px, 5vw, 56px);
-      display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      align-items: center;
-      gap: 40px;
-    }
-    .contact h2 {
-      font-size: clamp(28px, 4.2vw, 44px);
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin: 0 0 14px;
-    }
-    .contact p {
-      font-size: 16px;
-      color: var(--muted);
-      margin: 0;
-      max-width: 540px;
-    }
-    .contact-info {
-      border-left: 1px solid var(--line-light);
-      padding-left: 28px;
-    }
-    .contact-info small {
-      color: var(--accent);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      font-size: 11px;
-    }
-    .contact-info a {
-      display: block;
-      font-size: 19px;
-      font-weight: 800;
-      margin: 8px 0;
-      color: var(--text);
-    }
-    .contact-info a:hover { color: var(--accent); }
-    .contact-info span {
-      display: block;
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    /* Pie de página */
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 28px 0 42px;
-      color: var(--soft);
-      font-size: 14px;
-    }
-    .footer-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-    .socials { display: flex; gap: 20px; }
-    .socials a:hover { color: var(--text); }
-
-    /* Botón flotante de WhatsApp con ícono real */
-    .whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      z-index: 25;
-      width: 56px;
-      height: 56px;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: #25d366;
-      color: #fff;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-    .whatsapp:hover {
-      background: #20bd5a;
-      transform: translateY(-2px) scale(1.04);
-    }
-    .whatsapp svg {
-      width: 30px;
-      height: 30px;
-      fill: currentColor;
-    }
-
-    /* Modales (Visor de proyectos y Videos) */
-    .modal {
-      position: fixed;
-      inset: 0;
-      z-index: 50;
-      display: none;
-      place-items: center;
-      padding: 20px;
-      background: rgba(8, 8, 7, 0.88);
-      backdrop-filter: blur(8px);
-    }
-    .modal.open { display: grid; }
-
-    .modal-box {
-      position: relative;
-      width: min(520px, 100%);
-      height: min(82vh, 760px);
-      background: var(--surface);
-      border: 1px solid var(--line-light);
-      border-radius: var(--radius);
-    }
-    .modal iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      border-radius: var(--radius);
-    }
-
-    /* Visor detallado de fotografía */
-    .viewer-box {
-      position: relative;
-      width: min(1060px, 100%);
-      max-height: 90vh;
-      background: var(--surface);
-      border: 1px solid var(--line-light);
-      border-radius: var(--radius);
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
-      overflow: hidden;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
-    }
-    .viewer-stage {
-      position: relative;
-      background: #090908;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 420px;
-      max-height: 86vh;
-    }
-    .viewer-stage img {
-      width: 100%;
-      height: 100%;
-      max-height: 86vh;
-      object-fit: contain;
-      display: block;
-    }
-    .viewer-nav {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      background: rgba(14, 13, 11, 0.78);
-      color: var(--text);
-      font-size: 22px;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
-    }
-    .viewer-nav:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #111;
-    }
-    .viewer-prev { left: 14px; }
-    .viewer-next { right: 14px; }
-
-    .viewer-details {
-      padding: 30px 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      overflow-y: auto;
-      border-left: 1px solid var(--line);
-    }
-    .viewer-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .viewer-tag {
-      color: var(--accent);
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-    .viewer-count {
-      color: var(--soft);
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .viewer-details h3 {
-      margin: 0 0 12px;
-      font-size: 24px;
-      line-height: 1.2;
-    }
-    .viewer-details p {
-      color: #ccc5ba;
-      font-size: 14.5px;
-      line-height: 1.65;
-      margin: 0 0 20px;
-    }
-    .viewer-specs {
-      list-style: none;
-      padding: 16px 0 0;
-      margin: 0 0 24px;
-      border-top: 1px solid var(--line);
-      font-size: 13px;
-      color: var(--muted);
-    }
-    .viewer-specs li {
-      padding: 6px 0;
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .viewer-specs li strong {
-      color: var(--text);
-      font-weight: 600;
-    }
-    .viewer-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .viewer-actions .btn {
-      width: 100%;
-    }
-
-    .close {
-      position: absolute;
-      right: 12px;
-      top: 12px;
-      z-index: 5;
-      width: 38px;
-      height: 38px;
-      border: 1px solid var(--line-light);
-      background: rgba(14, 13, 11, 0.85);
-      color: var(--text);
-      border-radius: 50%;
-      font-size: 20px;
-      cursor: pointer;
-      display: grid;
-      place-items: center;
-      transition: background 0.2s ease;
-    }
-    .close:hover {
-      background: var(--accent);
-      color: #111;
-      border-color: var(--accent);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(18px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-    .reveal.in {
-      opacity: 1;
-      transform: none;
-    }
-
-    @media (max-width: 960px) {
-      .project-grid { grid-template-columns: repeat(2, 1fr); }
-      .service-grid { grid-template-columns: repeat(2, 1fr); }
-      .video-grid { grid-template-columns: repeat(2, 1fr); }
-      .viewer-box {
-        grid-template-columns: 1fr;
-        max-height: 92vh;
-        overflow-y: auto;
-      }
-      .viewer-stage {
-        min-height: 280px;
-        max-height: 52vh;
-      }
-      .viewer-details {
-        border-left: 0;
-        border-top: 1px solid var(--line);
-        padding: 22px 20px;
-      }
-      .navlinks {
-        position: absolute;
-        top: 72px; left: 0; right: 0;
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 20px;
-        background: #12110e;
-        border-bottom: 1px solid var(--line);
-      }
-      .navlinks.open { display: flex; }
-      .menu { display: block; }
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-note { max-width: 460px; }
-      .contact-card { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr; }
-      .contact-info {
-        border-left: 0;
-        border-top: 1px solid var(--line-light);
-        padding: 22px 0 0;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .project-grid { grid-template-columns: 1fr; }
-      .service-grid { grid-template-columns: 1fr; }
-      .video-grid { grid-template-columns: 1fr; }
-      .wrap { width: min(100% - 28px, var(--max)); }
-      .nav { height: 64px; }
-      .navlinks { top: 64px; }
-      .hero { min-height: auto; padding: 116px 0 56px; }
-      .actions .btn { width: 100%; }
-      section { padding: 68px 0; }
-      .section-head, .video-heading { display: block; }
-      .section-head p, .video-heading p { margin-top: 12px; }
-      .reels-note, .footer-row {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      * { animation: none !important; transition: none !important; }
-    }
-  </style>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="wrap nav">
+  <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+  <header class="site-header" id="inicio">
+    <div class="nav-shell">
       <a class="brand" href="#inicio" aria-label="Industrias AP, inicio">
-        <span class="mark">AP</span>
-        <span>INDUSTRIAS AP<small>MUEBLES A MEDIDA</small></span>
+        <span class="brand-mark" aria-hidden="true">AP</span>
+        <span class="brand-copy"><strong>INDUSTRIAS AP</strong><small>Mobiliario a medida</small></span>
       </a>
-      <button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button>
-      <nav class="navlinks" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
+        <span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
         <a href="#proyectos">Proyectos</a>
+        <a href="#servicios">Servicios</a>
         <a href="#proceso">Proceso</a>
-        <a href="#contacto">Contacto</a>
-        <a class="nav-cta" href="https://www.facebook.com/profile.php?id=61558266857696" target="_blank" rel="noopener">Facebook ↗</a>
+        <a href="#inspiracion">Reels</a>
+        <a class="nav-cta" href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener">Cotizar proyecto</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow">Taller y fabricación en Huehuetenango</div>
-          <h1>Muebles hechos a la medida de <span>tu espacio</span></h1>
-          <p class="hero-copy">Diseñamos, fabricamos e instalamos cocinas integrales, muebles de baño, mobiliario comercial y proyectos especiales cuidando cada corte, herraje y acabado.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20quiero%20cotizar%20un%20mueble%20a%20medida." target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-            <a class="btn btn-ghost" href="#proyectos">Explorar catálogo</a>
-          </div>
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/projects/estacion-venta-principal.webp" alt="Mueble comercial personalizado fabricado por Industrias AP">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-content container">
+        <p class="eyebrow reveal">Diseño y fabricación · Huehuetenango</p>
+        <h1 id="hero-title" class="reveal">Muebles que definen<br><em>tu espacio.</em></h1>
+        <p class="hero-lead reveal">Diseñamos, fabricamos e instalamos mobiliario a medida con carácter, precisión y acabados que se sienten hechos para durar.</p>
+        <div class="hero-actions reveal">
+          <a class="button button-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↘</span></a>
+          <a class="button button-ghost" href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20me%20gustar%C3%ADa%20recibir%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Hablar por WhatsApp</a>
         </div>
-        <aside class="hero-note">
-          <strong>Trabajo directo de taller</strong>
-          <p>Tomamos medidas en sitio, seleccionamos materiales resistentes al uso diario y entregamos tu proyecto instalado en hogares y negocios.</p>
-        </aside>
+      </div>
+      <a class="scroll-cue" href="#servicios" aria-label="Descubrir más"><span></span>Descubre</a>
+    </section>
+
+    <section class="value-strip" aria-label="Ventajas de Industrias AP">
+      <div class="container value-grid">
+        <article><span>01</span><div><strong>Diseño a medida</strong><small>Pensado para tu espacio</small></div></article>
+        <article><span>02</span><div><strong>Fabricación local</strong><small>Hecho en Huehuetenango</small></div></article>
+        <article><span>03</span><div><strong>Instalación profesional</strong><small>Cuidamos cada detalle</small></div></article>
       </div>
     </section>
 
-    <section class="services" id="servicios">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <div class="eyebrow">Lo que fabricamos</div>
-            <h2>Soluciones pensadas para el uso diario</h2>
-          </div>
-          <p>Cada mueble se fabrica según las dimensiones reales de tu ambiente, combinando distribución práctica, herrajes confiables y acabados duraderos.</p>
+    <section class="services section" id="servicios">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Soluciones para cada ambiente</p><h2>Construimos alrededor<br>de tu forma de vivir.</h2></div>
+          <p>No trabajamos con medidas genéricas. Cada pieza nace de una necesidad real y se adapta al espacio, estilo y ritmo de quienes la van a usar.</p>
         </div>
-        <div class="service-grid reveal">
-          <article class="service">
-            <span class="service-num">01 · HOGAR</span>
-            <h3>Cocinas integrales</h3>
-            <p>Gabinetes aéreos y módulos base en L, lineales o con barra desayunadora, optimizando esquinas, cajoneras y área de lavatrastos.</p>
-          </article>
-          <article class="service">
-            <span class="service-num">02 · DORMITORIOS Y BAÑOS</span>
-            <h3>Closets y muebles de baño</h3>
-            <p>Organización interior a medida y gabinetes para lavamanos sobrepuesto o empotrado con materiales resistentes a la humedad.</p>
-          </article>
-          <article class="service">
-            <span class="service-num">03 · SALA Y ESTUDIO</span>
-            <h3>Paneles y estanterías</h3>
-            <p>Paneles alistonados con iluminación LED, tocadores flotantes, libreras de piso a techo y repisas decorativas personalizadas.</p>
-          </article>
-          <article class="service">
-            <span class="service-num">04 · NEGOCIOS</span>
-            <h3>Mobiliario comercial</h3>
-            <p>Mostradores de atención y cobro, vitrinas integradas, estaciones de trabajo con gavetas y exhibidores adaptados a tu marca.</p>
-          </article>
+        <div class="service-grid">
+          <a class="service-card reveal" href="#proyectos" data-filter-link="cocinas">
+            <img src="assets/projects/cocina-wengue-cuarzo.webp" alt="Cocina en melamina wengué y cuarzo" loading="lazy">
+            <div class="card-shade"></div><span class="card-number">01</span>
+            <div><h3>Cocinas</h3><p>Funcionalidad, orden y materiales que elevan el corazón del hogar.</p><span class="text-link">Ver proyectos →</span></div>
+          </a>
+          <a class="service-card reveal" href="#proyectos" data-filter-link="closets">
+            <img src="assets/projects/closet-expresso-roble.webp" alt="Clóset en tonos expresso y roble" loading="lazy">
+            <div class="card-shade"></div><span class="card-number">02</span>
+            <div><h3>Clósets</h3><p>Almacenamiento inteligente diseñado para aprovechar cada centímetro.</p><span class="text-link">Ver proyectos →</span></div>
+          </a>
+          <a class="service-card reveal" href="#proyectos" data-filter-link="lavamanos">
+            <img src="assets/projects/lavamanos-roble-oscuro.webp" alt="Mueble de lavamanos en roble oscuro" loading="lazy">
+            <div class="card-shade"></div><span class="card-number">03</span>
+            <div><h3>Lavamanos</h3><p>Diseño compacto, acabados resistentes y una presencia impecable.</p><span class="text-link">Ver proyectos →</span></div>
+          </a>
+          <a class="service-card reveal" href="#proyectos" data-filter-link="especiales">
+            <img src="assets/projects/estacion-cafe.webp" alt="Estación de café personalizada" loading="lazy">
+            <div class="card-shade"></div><span class="card-number">04</span>
+            <div><h3>Diseños especiales</h3><p>Mobiliario comercial y piezas únicas que convierten una idea en realidad.</p><span class="text-link">Ver proyectos →</span></div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="proyectos">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <div class="eyebrow">Catálogo de trabajos reales</div>
-            <h2>Proyectos fabricados por Industrias AP</h2>
-          </div>
-          <p>Haz clic sobre cualquier proyecto para ver la fotografía en tamaño completo, conocer sus especificaciones de fabricación o cotizar un diseño similar.</p>
+    <section class="portfolio section" id="proyectos">
+      <div class="container">
+        <div class="section-heading portfolio-heading reveal">
+          <div><p class="eyebrow">Trabajo reciente</p><h2>Proyectos con carácter.</h2></div>
+          <p>Una selección real de cocinas, clósets, baños y mobiliario personalizado fabricado por nuestro equipo.</p>
         </div>
-
         <div class="filters reveal" role="group" aria-label="Filtrar proyectos">
-          <button class="filter active" data-filter="all">Todos (12)</button>
-          <button class="filter" data-filter="cocinas">Cocinas</button>
-          <button class="filter" data-filter="banos">Baños</button>
-          <button class="filter" data-filter="comerciales">Comerciales</button>
-          <button class="filter" data-filter="especiales">Especiales</button>
+          <button class="filter active" type="button" data-filter="todos" aria-pressed="true">Todos <span>32</span></button>
+          <button class="filter" type="button" data-filter="cocinas" aria-pressed="false">Cocinas <span>8</span></button>
+          <button class="filter" type="button" data-filter="closets" aria-pressed="false">Clósets <span>6</span></button>
+          <button class="filter" type="button" data-filter="lavamanos" aria-pressed="false">Lavamanos <span>12</span></button>
+          <button class="filter" type="button" data-filter="especiales" aria-pressed="false">Especiales <span>6</span></button>
         </div>
+        <div class="project-grid" id="project-grid" aria-live="polite"></div>
+        <div class="load-more-wrap"><button class="button button-outline" id="load-more" type="button">Ver más proyectos</button></div>
+      </div>
+    </section>
 
-        <div class="project-grid">
-          <!-- 1 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Mostrador comercial D'Or Botán"
-            data-category="comerciales"
-            data-tag="Mobiliario Comercial"
-            data-title="Mostrador comercial D'Or Botán"
-            data-image="IMG_20260903_100926816_HDR_AE.jpg"
-            data-alt="Mostrador comercial verde con vitrina para D'Or Botán"
-            data-material="Frente alistonado verde bosque y vitrina en vidrio templado"
-            data-layout="Mostrador en L con esquina curva y zócalo iluminado"
-            data-detail="Mueble de recepción y exhibición fabricado a medida para local comercial. Cuenta con frente revestido en listones verticales tono verde bosque, esquina curva continua, zócalo retraído con perfil dorado e iluminación LED cálida indirecta. Integra una vitrina superior con estructura negra y entrepaños para exhibición de producto.">
-            <div class="project-media">
-              <img src="IMG_20260903_100926816_HDR_AE.jpg" alt="Mostrador comercial verde con vitrina para D'Or Botán" loading="lazy">
-              <span class="project-badge">Comercial</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Mostrador comercial D'Or Botán</h3>
-              <p>Mostrador de recepción con frente alistonado en verde bosque, esquina curva, iluminación LED en zócalo dorado y vitrina exhibidora integrada.</p>
-              <div class="project-specs">
-                <span>Frente alistonado · Vitrina integrada</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 2 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Cocina integral en L tono wengué"
-            data-category="cocinas"
-            data-tag="Cocina Integral"
-            data-title="Cocina integral en L tono wengué"
-            data-image="482103765_122179654190275561_6262593266736215696_n.jpg"
-            data-alt="Cocina integral en tono wengué con cubierta clara"
-            data-material="Melamina texturizada tono wengué y top claro continuo"
-            data-layout="Distribución en L con gabinetes aéreos y módulo de gavetas"
-            data-detail="Cocina integral de gran capacidad diseñada en escuadra (L). Combina módulos inferiores profundos con cubierta clara continua para área de preparación y fregadero doble, junto con una torre de tres gavetas junto a la estufa. En la parte superior incorpora gabinetes de piso a línea de techo con veta vertical y jaladeras de barra en acero inoxidable.">
-            <div class="project-media">
-              <img src="482103765_122179654190275561_6262593266736215696_n.jpg" alt="Cocina integral en tono wengué" loading="lazy">
-              <span class="project-badge">Cocina</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Cocina integral en L tono wengué</h3>
-              <p>Gabinetes superiores e inferiores en acabado madera wengué de veta vertical, encimera clara continua, área de lavatrastos doble y módulo de tres gavetas.</p>
-              <div class="project-specs">
-                <span>Acabado Wengué · Distribución en L</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 3 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Cocina modular blanca con top marmoleado"
-            data-category="cocinas"
-            data-tag="Cocina Integral"
-            data-title="Cocina modular blanca con top marmoleado"
-            data-image="481770658_122179654220275561_8537373676545371792_n.jpg"
-            data-alt="Cocina compacta blanca con top tipo mármol"
-            data-material="Melamina blanca lisa y cubierta laminada tipo mármol"
-            data-layout="Esquinera con repisas curvas, nicho de microondas y módulo auxiliar"
-            data-detail="Propuesta luminosa pensada para maximizar cocinas residenciales. Incluye mueble base en esquina con tres gavetas laterales, cubierta con acabado mármol veteado y salpicadera integrada. Los gabinetes aéreos integran esquinero abierto, repisas laterales curvas de fácil acceso, espacio para campana extractora, nicho para microondas y un módulo auxiliar independiente.">
-            <div class="project-media">
-              <img src="481770658_122179654220275561_8537373676545371792_n.jpg" alt="Cocina compacta blanca con top tipo mármol" loading="lazy">
-              <span class="project-badge">Cocina</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Cocina modular blanca con top marmoleado</h3>
-              <p>Diseño luminoso en esquina con repisas curvas abiertas, nicho aéreo para microondas, cajonera de tres niveles, cubierta tipo mármol y módulo auxiliar.</p>
-              <div class="project-specs">
-                <span>Melamina Blanca · Top tipo mármol</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 4 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Estación de atención y módulo organizador"
-            data-category="comerciales"
-            data-tag="Mobiliario Comercial"
-            data-title="Estación de atención y módulo organizador"
-            data-image="IMG_20260826_122047130_HDR_AE.jpg"
-            data-alt="Mostrador comercial verde y blanco visto desde el interior"
-            data-material="Frente ranurado verde, estructura blanca y herrajes dorados"
-            data-layout="Mostrador en L más credenza posterior de 6 nichos y 3 gavetas"
-            data-detail="Conjunto completo de atención al cliente visto desde el área operativa. Combina el mostrador frontal en L de cubierta blanca amplia con un mueble organizador lateral dotado de tres gavetas centrales con jaladeras doradas y seis compartimentos abiertos para tener inventario, bolsas y papelería siempre a la mano.">
-            <div class="project-media">
-              <img src="IMG_20260826_122047130_HDR_AE.jpg" alt="Mostrador comercial verde y blanco visto desde el interior" loading="lazy">
-              <span class="project-badge">Comercial</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Estación de atención y módulo organizador</h3>
-              <p>Conjunto comercial en L con amplia superficie blanca de atención, complementado con mueble de seis nichos abiertos y tres gavetas con herraje dorado.</p>
-              <div class="project-specs">
-                <span>Doble módulo · Gavetas y nichos</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 5 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Cocina en tono caoba con buffet auxiliar"
-            data-category="cocinas"
-            data-tag="Cocina Integral"
-            data-title="Cocina en tono caoba con buffet auxiliar"
-            data-image="486549917_122185668140275561_6463903416041036542_n.jpg"
-            data-alt="Cocina integral en madera cálida y top blanco"
-            data-material="Acabado madera cálida tono caoba y cubierta blanca"
-            data-layout="Cocina en L bajo ventana con mueble auxiliar independiente"
-            data-detail="Cocina residencial fabricada en acabado madera tono caoba cálido en contraste con cubiertas blancas limpias. Aprovecha la iluminación natural ubicando el fregadero doble bajo la ventana, suma una línea continua de gabinetes superiores de almacenamiento e incorpora un módulo buffet lateral de dos puertas para electrodomésticos o despensa.">
-            <div class="project-media">
-              <img src="486549917_122185668140275561_6463903416041036542_n.jpg" alt="Cocina integral en madera cálida y top blanco" loading="lazy">
-              <span class="project-badge">Cocina</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Cocina en tono caoba con buffet auxiliar</h3>
-              <p>Distribución en L con fregadero bajo ventana, gabinetes superiores corridos en madera cálida, cajonera lateral y mueble auxiliar con cubierta blanca.</p>
-              <div class="project-specs">
-                <span>Madera cálida · Módulo auxiliar</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 6 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Tocador flotante sobre panel alistonado LED"
-            data-category="especiales"
-            data-tag="Proyecto Especial"
-            data-title="Tocador flotante sobre panel alistonado LED"
-            data-image="IMG_20251022_155532678.jpg"
-            data-alt="Panel ranurado con repisas blancas e iluminación LED"
-            data-material="Listones verticales en tono madera y módulos blancos"
-            data-layout="Panel de piso a techo con consola suspendida de 2 gavetas"
-            data-detail="Diseño vertical a medida para aprovechar pasillos o rincones de dormitorio. Se construyó sobre un respaldo alistonado en tono madera natural que oculta el cableado e integra una consola flotante blanca de dos gavetas con jaladeras negras, dos repisas intermedias y techo con tiras de iluminación LED.">
-            <div class="project-media">
-              <img src="IMG_20251022_155532678.jpg" alt="Panel ranurado con repisas blancas e iluminación LED" loading="lazy">
-              <span class="project-badge">Especial</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Tocador flotante sobre panel alistonado LED</h3>
-              <p>Respaldo vertical de listones en tono madera con módulo suspendido de dos gavetas blancas, repisas aéreas e iluminación LED integrada.</p>
-              <div class="project-specs">
-                <span>Mueble flotante · Iluminación LED</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 7 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Muebles de baño en gris grafito"
-            data-category="banos"
-            data-tag="Mueble de Baño"
-            data-title="Muebles de baño en gris grafito"
-            data-image="IMG_20251129_114603058_HDR.jpg"
-            data-alt="Dos muebles grises para lavamanos con cajones"
-            data-material="Melamina gris grafito y lavamanos blanco integrado"
-            data-layout="Doble puerta central y columna lateral de 3 gavetas"
-            data-detail="Par de gabinetes de baño fabricados a medida con estructura elevada sobre patas cortas para facilitar la limpieza del piso. Cada mueble cuenta con lavamanos de cerámica blanca de una sola pieza, compartimento doble bajo el sifón y tres gavetas laterales con correderas suaves y jaladeras metálicas en negro mate.">
-            <div class="project-media">
-              <img src="IMG_20251129_114603058_HDR.jpg" alt="Dos muebles grises para lavamanos con cajones" loading="lazy">
-              <span class="project-badge">Baño</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Muebles de baño en gris grafito</h3>
-              <p>Gabinetes para lavamanos en acabado gris mate con cubierta cerámica integrada, doble puerta central, tres gavetas laterales y herrajes negros.</p>
-              <div class="project-specs">
-                <span>Gris Grafito · Herraje negro mate</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 8 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Interior operativo de mostrador en L"
-            data-category="comerciales"
-            data-tag="Mobiliario Comercial"
-            data-title="Interior operativo de mostrador en L"
-            data-image="IMG_20260826_122053087_AE.jpg"
-            data-alt="Interior de mostrador comercial con repisas y cajones"
-            data-material="Interior blanco de fácil limpieza y costados alistonados"
-            data-layout="6 entrepaños abiertos, 3 gavetas centrales y retorno en L"
-            data-detail="Vista en detalle del interior de trabajo de nuestros mostradores comerciales. La distribución interna está pensada para la comodidad del personal: módulos abiertos a ambos lados, cajonera central de tres niveles con jaladeras metálicas y ala lateral con entrepaño inferior corrido para equipos, cajas o suministros.">
-            <div class="project-media">
-              <img src="IMG_20260826_122053087_AE.jpg" alt="Interior de mostrador comercial con repisas y cajones" loading="lazy">
-              <span class="project-badge">Comercial</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Interior operativo de mostrador en L</h3>
-              <p>Organización interna diseñada para punto de venta: entrepaños abiertos de rápido acceso, cajonera triple central y retorno en L con repisa inferior.</p>
-              <div class="project-specs">
-                <span>Ergonomía comercial · Punto de venta</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 9 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Cocina con barra desayunadora y cenefa"
-            data-category="cocinas"
-            data-tag="Cocina Integral"
-            data-title="Cocina con barra desayunadora y cenefa"
-            data-image="605141091_122225529920275561_234611509579457869_n.jpg"
-            data-alt="Cocina oscura con barra blanca"
-            data-material="Melamina madera ceniza oscura y superficies tipo mármol blanco"
-            data-layout="Cocina en U con barra desayunadora, cenefa y torre de refrigeradora"
-            data-detail="Proyecto integral que enmarca el área social y la cocina. Incorpora una barra desayunadora revestida en acabado mármol blanco con columna lateral de repisas abiertas y cenefa superior para lámparas colgantes. Al fondo integra mueble de fregadero bajo ventana, gabinetes aéreos y marco a medida para refrigeradora.">
-            <div class="project-media">
-              <img src="605141091_122225529920275561_234611509579457869_n.jpg" alt="Cocina oscura con barra blanca" loading="lazy">
-              <span class="project-badge">Cocina</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Cocina con barra desayunadora y cenefa</h3>
-              <p>Módulos en madera oscura con barra tipo mármol blanco, columna con nichos decorativos, cenefa superior para iluminación y marco para refrigeradora.</p>
-              <div class="project-specs">
-                <span>Barra integrada · Marco de refrigeradora</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 10 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Mueble de baño compacto para lavamanos sobrepuesto"
-            data-category="banos"
-            data-tag="Mueble de Baño"
-            data-title="Mueble de baño para lavamanos sobrepuesto"
-            data-image="IMG_20260604_105202172_HDR_AE.jpg"
-            data-alt="Mueble de baño color madera con lavamanos redondo"
-            data-material="Melamina tono nogal y cubierta clara tipo cuarzo"
-            data-layout="Gabinete compacto de 2 puertas para ovalín sobrepuesto"
-            data-detail="Solución práctica y elegante para baños de visitas o espacios reducidos. Gabinete de dos puertas batientes en acabado madera nogal de veta marcada, coronado por una cubierta clara resistente a salpicaduras con lavamanos circular sobrepuesto y grifería alta monocromática.">
-            <div class="project-media">
-              <img src="IMG_20260604_105202172_HDR_AE.jpg" alt="Mueble de baño color madera con lavamanos redondo" loading="lazy">
-              <span class="project-badge">Baño</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Mueble de baño para lavamanos sobrepuesto</h3>
-              <p>Gabinete compacto de dos puertas en tono nogal con cubierta clara resistente a la humedad, diseñado para ovalín circular y grifería alta.</p>
-              <div class="project-specs">
-                <span>Acabado Nogal · Ovalín sobrepuesto</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 11 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Repisa modular geométrica en madera"
-            data-category="especiales"
-            data-tag="Proyecto Especial"
-            data-title="Repisa modular geométrica en madera"
-            data-image="IMG_20260421_123931561.jpg"
-            data-alt="Repisa geométrica personalizada en proceso de fabricación"
-            data-material="Madera natural ensamblada en taller"
-            data-layout="Doble columna lateral con puente central de 2 niveles"
-            data-detail="Pieza de carpintería fabricada en nuestro taller con ensambles limpios y espesor uniforme. Su diseño geométrico combina dos columnas laterales de doble nicho unidas por entrepaños centrales, ideal para colocar libros, plantas o piezas decorativas sobre pared o credenza.">
-            <div class="project-media">
-              <img src="IMG_20260421_123931561.jpg" alt="Repisa geométrica personalizada en proceso de fabricación" loading="lazy">
-              <span class="project-badge">Especial</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Repisa modular geométrica en madera</h3>
-              <p>Estructura decorativa de doble columna y entrepaños centrales fabricada en taller en madera natural para salas, estudios o recibidores.</p>
-              <div class="project-specs">
-                <span>Madera natural · Diseño a medida</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 12 -->
-          <article class="project reveal" tabindex="0" role="button" aria-label="Ver detalles de Torres de estantería y almacenamiento vertical"
-            data-category="especiales"
-            data-tag="Proyecto Especial"
-            data-title="Torres de estantería y almacenamiento vertical"
-            data-image="IMG_20260515_150850268_HDR_AE.jpg"
-            data-alt="Mueble alto de madera con repisas abiertas"
-            data-material="Madera natural con divisiones reforzadas y correderas"
-            data-layout="Módulos verticales de gran altura con nichos y área para gavetas"
-            data-detail="Par de módulos altos de almacenamiento fabricados en madera sólida/enchapada. Cuentan con nichos superiores de altura completa, niveles intermedios subdivididos para clasificación ordenada y compartimentos inferiores preparados con correderas telescópicas para gavetas de extracción total.">
-            <div class="project-media">
-              <img src="IMG_20260515_150850268_HDR_AE.jpg" alt="Mueble alto de madera con repisas abiertas" loading="lazy">
-              <span class="project-badge">Especial</span>
-              <span class="zoom-hint">Ver detalle ＋</span>
-            </div>
-            <div class="project-body">
-              <h3>Torres de estantería y almacenamiento vertical</h3>
-              <p>Estanterías altas en madera natural con divisiones asimétricas para organización y sección inferior preparada con correderas telescópicas.</p>
-              <div class="project-specs">
-                <span>Gran capacidad · Madera en taller</span>
-                <span>Ver ficha →</span>
-              </div>
-            </div>
-          </article>
+    <section class="process section" id="proceso">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">De la idea a la instalación</p><h2>Un proceso claro.<br>Un resultado personal.</h2></div>
+          <p>Te acompañamos desde la primera conversación hasta el último ajuste para que cada decisión tenga sentido.</p>
         </div>
-
-        <div class="video-heading reveal">
-          <div>
-            <div class="eyebrow">Recorridos en video</div>
-            <h3>Acabados e instalaciones en detalle</h3>
-          </div>
-          <p>Reproduce estos cuatro videos publicados en nuestra página de Facebook para apreciar los muebles ya instalados.</p>
-        </div>
-
-        <div class="video-grid reveal">
-          <button class="video-card play" data-reel="https://www.facebook.com/reel/998740752572441">
-            <img src="481770658_122179654220275561_8537373676545371792_n.jpg" alt="Video de cocina modular blanca" loading="lazy">
-            <i>▶</i>
-            <span class="video-info">
-              <strong>Cocina blanca en esquina</strong>
-              <small>Ver recorrido en video</small>
-            </span>
-          </button>
-          <button class="video-card play" data-reel="https://www.facebook.com/reel/1276577594678987">
-            <img src="482103765_122179654190275561_6262593266736215696_n.jpg" alt="Video de cocina integral wengué" loading="lazy">
-            <i>▶</i>
-            <span class="video-info">
-              <strong>Cocina integral wengué</strong>
-              <small>Ver recorrido en video</small>
-            </span>
-          </button>
-          <button class="video-card play" data-reel="https://www.facebook.com/reel/3188273254703222">
-            <img src="IMG_20260826_122047130_HDR_AE.jpg" alt="Video de mostrador comercial" loading="lazy">
-            <i>▶</i>
-            <span class="video-info">
-              <strong>Mostrador comercial en L</strong>
-              <small>Ver recorrido en video</small>
-            </span>
-          </button>
-          <button class="video-card play" data-reel="https://www.facebook.com/reel/722536150471347">
-            <img src="IMG_20251022_155532678.jpg" alt="Video de panel con iluminación LED" loading="lazy">
-            <i>▶</i>
-            <span class="video-info">
-              <strong>Panel alistonado con LED</strong>
-              <small>Ver recorrido en video</small>
-            </span>
-          </button>
-        </div>
-
-        <div class="reels-note reveal">
-          <span><strong>¿Quieres ver más trabajos recientes?</strong> Publicamos nuevas entregas e instalaciones en nuestra página oficial.</span>
-          <a href="https://www.facebook.com/profile.php?id=61558266857696" target="_blank" rel="noopener">Visitar Facebook de Industrias AP ↗</a>
+        <div class="process-grid">
+          <article class="process-step reveal"><span>01</span><h3>Conversamos</h3><p>Conocemos tu idea, necesidades, medidas de referencia y presupuesto.</p></article>
+          <article class="process-step reveal"><span>02</span><h3>Diseñamos</h3><p>Definimos distribución, materiales, colores y detalles funcionales.</p></article>
+          <article class="process-step reveal"><span>03</span><h3>Fabricamos</h3><p>Construimos cada módulo con precisión y control de acabados.</p></article>
+          <article class="process-step reveal"><span>04</span><h3>Instalamos</h3><p>Montamos y ajustamos el proyecto para entregarlo listo para disfrutar.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="process" id="proceso">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <div>
-            <div class="eyebrow">Proceso de trabajo</div>
-            <h2>Cómo trabajamos tu proyecto</h2>
-          </div>
-          <p>Te acompañamos desde la idea inicial hasta dejar el mueble instalado en tu casa o negocio.</p>
+    <section class="reels section" id="inspiracion">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Proyectos en movimiento</p><h2>Conoce el resultado<br>desde cada ángulo.</h2></div>
+          <p>Seleccionamos los proyectos que mejor muestran nuestros acabados, soluciones de almacenamiento y fabricación a medida.</p>
         </div>
-        <div class="steps reveal">
-          <article class="step">
-            <b>PASO 01</b>
-            <h3>Medidas e idea inicial</h3>
-            <p>Escríbenos por WhatsApp con una fotografía del área, medidas aproximadas o el proyecto del catálogo que te haya gustado como referencia.</p>
+        <div class="platform-heading reveal"><div><span>TikTok</span><h3>Selección de proyectos</h3></div><a href="https://www.tiktok.com/@yefajanel815" target="_blank" rel="noopener">Ver perfil completo ↗</a></div>
+        <div class="tiktok-grid">
+          <article class="video-card reveal">
+            <div class="tiktok-embed"><iframe title="Exhibidor comercial para protectores de teléfono" src="https://www.tiktok.com/player/v1/7667341663299292436?autoplay=0&amp;loop=0&amp;description=0&amp;rel=0" loading="lazy" allow="fullscreen; autoplay; encrypted-media" allowfullscreen></iframe></div>
+            <div class="video-card-copy"><span>Diseño comercial</span><h3>Exhibidor para protectores</h3><p>Una solución de exhibición ordenada y funcional para presentar producto sin saturar el espacio.</p><a href="https://www.tiktok.com/@yefajanel815/video/7667341663299292436" target="_blank" rel="noopener">Ver en TikTok ↗</a></div>
           </article>
-          <article class="step">
-            <b>PASO 02</b>
-            <h3>Propuesta y cotización</h3>
-            <p>Definimos la distribución interior (gavetas, puertas, repisas), el color y tipo de material, herrajes y el presupuesto detallado.</p>
+          <article class="video-card reveal">
+            <div class="tiktok-embed"><iframe title="Walking clóset personalizado" src="https://www.tiktok.com/player/v1/7678416020855426324?autoplay=0&amp;loop=0&amp;description=0&amp;rel=0" loading="lazy" allow="fullscreen; autoplay; encrypted-media" allowfullscreen></iframe></div>
+            <div class="video-card-copy"><span>Clóset personalizado</span><h3>Diseñado a tu estilo</h3><p>Distribución a medida para organizar prendas y accesorios aprovechando cada sección disponible.</p><a href="https://www.tiktok.com/@yefajanel815/video/7678416020855426324" target="_blank" rel="noopener">Ver en TikTok ↗</a></div>
           </article>
-          <article class="step">
-            <b>PASO 03</b>
-            <h3>Fabricación e instalación</h3>
-            <p>Fabricamos cada módulo en nuestro taller en Huehuetenango y coordinamos el traslado y montaje final en tu espacio.</p>
+          <article class="video-card reveal">
+            <div class="tiktok-embed"><iframe title="Mueble reforzado fabricado a medida" src="https://www.tiktok.com/player/v1/7687803733350075668?autoplay=0&amp;loop=0&amp;description=0&amp;rel=0" loading="lazy" allow="fullscreen; autoplay; encrypted-media" allowfullscreen></iframe></div>
+            <div class="video-card-copy"><span>Fabricación a medida</span><h3>Mueble reforzado de gran formato</h3><p>Dos metros de altura y módulos de distinta profundidad para equilibrar capacidad, presencia y funcionalidad.</p><a href="https://www.tiktok.com/@yefajanel815/video/7687803733350075668" target="_blank" rel="noopener">Ver en TikTok ↗</a></div>
           </article>
+          <article class="video-card reveal">
+            <div class="tiktok-embed"><iframe title="Lavamanos a medida con top de mármol" src="https://www.tiktok.com/player/v1/7658663477875150101?autoplay=0&amp;loop=0&amp;description=0&amp;rel=0" loading="lazy" allow="fullscreen; autoplay; encrypted-media" allowfullscreen></iframe></div>
+            <div class="video-card-copy"><span>Lavamanos</span><h3>Elegancia en formato compacto</h3><p>Mueble de 95 × 60 cm con top de mármol, diseñado para destacar sin perder practicidad.</p><a href="https://www.tiktok.com/@yefajanel815/video/7658663477875150101" target="_blank" rel="noopener">Ver en TikTok ↗</a></div>
+          </article>
+          <article class="video-card reveal">
+            <div class="tiktok-embed"><iframe title="Proyecto en madera de cedro" src="https://www.tiktok.com/player/v1/7656175668614466836?autoplay=0&amp;loop=0&amp;description=0&amp;rel=0" loading="lazy" allow="fullscreen; autoplay; encrypted-media" allowfullscreen></iframe></div>
+            <div class="video-card-copy"><span>Madera natural</span><h3>Proyecto completo en cedro</h3><p>La calidez y durabilidad del cedro trabajadas en una composición personalizada de gran capacidad.</p><a href="https://www.tiktok.com/@yefajanel815/video/7656175668614466836" target="_blank" rel="noopener">Ver en TikTok ↗</a></div>
+          </article>
+          <article class="video-card reveal">
+            <div class="tiktok-embed"><iframe title="Zapatera personalizada" src="https://www.tiktok.com/player/v1/7616501096508411156?autoplay=0&amp;loop=0&amp;description=0&amp;rel=0" loading="lazy" allow="fullscreen; autoplay; encrypted-media" allowfullscreen></iframe></div>
+            <div class="video-card-copy"><span>Organización</span><h3>Zapatera de alta capacidad</h3><p>Almacenamiento vertical creado para ordenar más pares utilizando de manera eficiente el espacio disponible.</p><a href="https://www.tiktok.com/@yefajanel815/video/7616501096508411156" target="_blank" rel="noopener">Ver en TikTok ↗</a></div>
+          </article>
+        </div>
+
+        <div class="platform-heading facebook-heading reveal"><div><span>Facebook</span><h3>Más recorridos y procesos</h3></div><a href="https://www.facebook.com/profile.php?id=61558266857696" target="_blank" rel="noopener">Seguir la página ↗</a></div>
+        <div class="reel-grid facebook-grid">
+          <article class="reel-card reveal"><div class="reel-embed"><iframe title="Reel de Industrias AP 1" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F998740752572441&amp;show_text=false&amp;width=360" width="360" height="640" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div><a href="https://www.facebook.com/reel/998740752572441" target="_blank" rel="noopener">Ver en Facebook ↗</a></article>
+          <article class="reel-card reveal"><div class="reel-embed"><iframe title="Reel de Industrias AP 2" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1276577594678987&amp;show_text=false&amp;width=360" width="360" height="640" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div><a href="https://www.facebook.com/reel/1276577594678987" target="_blank" rel="noopener">Ver en Facebook ↗</a></article>
+          <article class="reel-card reveal"><div class="reel-embed"><iframe title="Reel de Industrias AP 3" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3188273254703222&amp;show_text=false&amp;width=360" width="360" height="640" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div><a href="https://www.facebook.com/reel/3188273254703222" target="_blank" rel="noopener">Ver en Facebook ↗</a></article>
+          <article class="reel-card reveal"><div class="reel-embed"><iframe title="Reel de Industrias AP 4" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F722536150471347&amp;show_text=false&amp;width=360" width="360" height="640" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></div><a href="https://www.facebook.com/reel/722536150471347" target="_blank" rel="noopener">Ver en Facebook ↗</a></article>
         </div>
       </div>
     </section>
 
-    <section class="contact" id="contacto">
-      <div class="wrap">
-        <div class="contact-card reveal">
-          <div>
-            <h2>Cotiza tu próximo mueble a medida</h2>
-            <p>Envíanos un mensaje con las medidas aproximadas o una foto de tu espacio y con gusto te asesoramos en materiales, distribución y precios.</p>
-            <div class="actions">
-              <a class="btn btn-primary" href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Escribir por WhatsApp</a>
-            </div>
-          </div>
-          <div class="contact-info">
-            <small>ATENCIÓN DIRECTA</small>
-            <a href="tel:+50250066630">+502 5006 6630</a>
-            <a href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20quiero%20informaci%C3%B3n%20para%20un%20proyecto." target="_blank" rel="noopener">WhatsApp directo ↗</a>
-            <span>Huehuetenango, Guatemala</span>
-          </div>
+    <section class="contact section" id="contacto">
+      <div class="container contact-panel reveal">
+        <div>
+          <p class="eyebrow">Tu espacio puede ser el siguiente</p>
+          <h2>Conversemos sobre<br><em>tu proyecto.</em></h2>
+        </div>
+        <div class="contact-side">
+          <p>Cuéntanos qué necesitas y te ayudaremos a convertirlo en un mueble pensado para tu espacio.</p>
+          <a class="button button-light" href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20quiero%20cotizar%20un%20mueble%20a%20medida." target="_blank" rel="noopener">Escribir por WhatsApp <span>↗</span></a>
+          <a class="phone-link" href="tel:+50250066630">+502 5006 6630</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-row">
-      <span>© <span id="year"></span> Industrias AP · Fabricación de muebles a medida en Huehuetenango.</span>
-      <div class="socials">
-        <a href="https://wa.me/50250066630" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="https://www.facebook.com/profile.php?id=61558266857696" target="_blank" rel="noopener">Facebook</a>
-      </div>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand footer-brand" href="#inicio"><span class="brand-mark">AP</span><span class="brand-copy"><strong>INDUSTRIAS AP</strong><small>Mobiliario a medida</small></span></a><p>Diseñamos espacios que se sienten tuyos.</p></div>
+      <div><h3>Explora</h3><a href="#proyectos">Proyectos</a><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a></div>
+      <div><h3>Contacto</h3><a href="tel:+50250066630">+502 5006 6630</a><span>Huehuetenango, Guatemala</span><a href="https://www.facebook.com/profile.php?id=61558266857696" target="_blank" rel="noopener">Facebook ↗</a></div>
     </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Industrias AP</span><span>Diseño · Fabricación · Instalación</span></div>
   </footer>
 
-  <!-- Botón flotante con ícono oficial de WhatsApp -->
-  <a class="whatsapp" href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20quiero%20cotizar%20un%20mueble." aria-label="Escribir por WhatsApp" target="_blank" rel="noopener">
-    <svg viewBox="0 0 32 32" aria-hidden="true">
-      <path d="M16.01 4.2c-6.42 0-11.64 5.2-11.64 11.6 0 2.04.54 4.04 1.56 5.8L4.2 27.8l6.37-1.67a11.65 11.65 0 0 0 5.44 1.36h.01c6.42 0 11.64-5.2 11.64-11.6 0-3.1-1.21-6.01-3.41-8.2A11.58 11.58 0 0 0 16.01 4.2zm0 21.33h-.01a9.67 9.67 0 0 1-4.93-1.35l-.35-.21-3.78.99 1.01-3.68-.23-.38a9.6 9.6 0 0 1-1.48-5.12c0-5.32 4.35-9.65 9.7-9.65 2.59 0 5.02 1.01 6.85 2.83a9.58 9.58 0 0 1 2.84 6.82c0 5.33-4.35 9.66-9.62 9.66zm5.3-7.23c-.29-.15-1.72-.85-1.99-.94-.27-.1-.46-.15-.65.15-.2.29-.75.94-.92 1.13-.17.2-.34.22-.63.07-.29-.15-1.23-.45-2.34-1.44-.86-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.59.13-.13.29-.34.44-.51.14-.17.19-.29.29-.48.1-.2.05-.37-.02-.51-.08-.15-.65-1.57-.9-2.15-.23-.56-.47-.48-.65-.49l-.56-.01c-.2 0-.51.07-.78.37-.27.29-1.02.99-1.02 2.42 0 1.42 1.04 2.8 1.19 2.99.15.2 2.05 3.12 4.97 4.37.69.3 1.23.48 1.65.61.7.22 1.33.19 1.83.12.56-.08 1.72-.7 1.97-1.38.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34z"/>
-    </svg>
+  <a class="whatsapp-float" href="https://wa.me/50250066630?text=Hola%20Industrias%20AP%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a12.8 12.8 0 0 0-11 19.3L3.3 29l6.9-1.8A12.8 12.8 0 1 0 16 3Zm0 23.3c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.1 1.1 1.1-4-.3-.4A10.5 10.5 0 1 1 16 26.3Zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-2-.9-3.3-1.7-4.6-4-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.6l-1-2.5c-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.5 3.8 6 5.3 2.2.9 3.1 1 4.2.8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.3.2-1.5-.2-.2-.4-.3-.7-.4Z"/></svg>
+    <span>WhatsApp</span>
   </a>
 
-  <!-- Visor de fotografías con ficha detallada y navegación -->
-  <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-labelledby="viewerTitle">
-    <div class="viewer-box">
-      <button class="close image-close" aria-label="Cerrar vista detallada">×</button>
-      <div class="viewer-stage">
-        <button class="viewer-nav viewer-prev" type="button" aria-label="Proyecto anterior">‹</button>
-        <img id="viewerImg" src="" alt="">
-        <button class="viewer-nav viewer-next" type="button" aria-label="Proyecto siguiente">›</button>
-      </div>
-      <div class="viewer-details">
-        <div>
-          <div class="viewer-meta">
-            <span class="viewer-tag" id="viewerTag">Categoría</span>
-            <span class="viewer-count" id="viewerCount">1 / 12</span>
-          </div>
-          <h3 id="viewerTitle">Proyecto</h3>
-          <p id="viewerDesc"></p>
-          <ul class="viewer-specs">
-            <li><span>Materiales / Acabado</span><strong id="viewerMaterial"></strong></li>
-            <li><span>Configuración</span><strong id="viewerLayout"></strong></li>
-            <li><span>Fabricación</span><strong>A medida en Huehuetenango</strong></li>
-          </ul>
-        </div>
-        <div class="viewer-actions">
-          <a class="btn btn-primary" id="viewerWa" href="#" target="_blank" rel="noopener">Cotizar un diseño similar por WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal de video -->
-  <div class="modal" id="reelModal" role="dialog" aria-modal="true" aria-label="Proyecto en video">
-    <div class="modal-box">
-      <button class="close" aria-label="Cerrar video">×</button>
-      <iframe title="Reel de Industrias AP" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <script>
-    // Menú móvil
-    const menu = document.querySelector(".menu");
-    const nav = document.querySelector(".navlinks");
-    menu.addEventListener("click", () => {
-      const open = nav.classList.toggle("open");
-      menu.setAttribute("aria-expanded", open);
-      menu.textContent = open ? "×" : "☰";
-    });
-    nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-      nav.classList.remove("open");
-      menu.setAttribute("aria-expanded", "false");
-      menu.textContent = "☰";
-    }));
-
-    // Filtro de proyectos
-    const filters = document.querySelectorAll(".filter");
-    const projects = Array.from(document.querySelectorAll(".project"));
-    filters.forEach(btn => btn.addEventListener("click", () => {
-      filters.forEach(x => x.classList.remove("active"));
-      btn.classList.add("active");
-      const cat = btn.dataset.filter;
-      projects.forEach(card => {
-        card.hidden = cat !== "all" && card.dataset.category !== cat;
-      });
-    }));
-
-    // Visor detallado de proyectos (clic en cualquier tarjeta + Anterior/Siguiente + WhatsApp)
-    const imageModal = document.getElementById("imageModal");
-    const viewerImg = document.getElementById("viewerImg");
-    const viewerTag = document.getElementById("viewerTag");
-    const viewerCount = document.getElementById("viewerCount");
-    const viewerTitle = document.getElementById("viewerTitle");
-    const viewerDesc = document.getElementById("viewerDesc");
-    const viewerMaterial = document.getElementById("viewerMaterial");
-    const viewerLayout = document.getElementById("viewerLayout");
-    const viewerWa = document.getElementById("viewerWa");
-    const imageClose = imageModal.querySelector(".image-close");
-    const prevBtn = imageModal.querySelector(".viewer-prev");
-    const nextBtn = imageModal.querySelector(".viewer-next");
-
-    let visibleProjects = [];
-    let currentIndex = 0;
-
-    function updateViewer(index) {
-      if (!visibleProjects.length) return;
-      currentIndex = (index + visibleProjects.length) % visibleProjects.length;
-      const card = visibleProjects[currentIndex];
-      const title = card.dataset.title || "Proyecto Industrias AP";
-
-      viewerImg.src = card.dataset.image;
-      viewerImg.alt = card.dataset.alt || title;
-      viewerTag.textContent = card.dataset.tag || "Proyecto";
-      viewerCount.textContent = `${currentIndex + 1} de ${visibleProjects.length}`;
-      viewerTitle.textContent = title;
-      viewerDesc.textContent = card.dataset.detail || "";
-      viewerMaterial.textContent = card.dataset.material || "A elección del cliente";
-      viewerLayout.textContent = card.dataset.layout || "Adaptada al espacio";
-
-      const waMsg = `Hola Industrias AP, vi en su catálogo web el proyecto "${title}" y me gustaría cotizar un diseño similar.`;
-      viewerWa.href = `https://wa.me/50250066630?text=${encodeURIComponent(waMsg)}`;
-    }
-
-    function openProjectCard(card) {
-      visibleProjects = projects.filter(p => !p.hidden);
-      const idx = visibleProjects.indexOf(card);
-      updateViewer(idx >= 0 ? idx : 0);
-      imageModal.classList.add("open");
-      document.body.style.overflow = "hidden";
-      imageClose.focus();
-    }
-
-    function closeImage() {
-      imageModal.classList.remove("open");
-      viewerImg.src = "";
-      document.body.style.overflow = "";
-    }
-
-    projects.forEach(card => {
-      card.addEventListener("click", () => openProjectCard(card));
-      card.addEventListener("keydown", e => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          openProjectCard(card);
-        }
-      });
-    });
-
-    prevBtn.addEventListener("click", e => {
-      e.stopPropagation();
-      updateViewer(currentIndex - 1);
-    });
-    nextBtn.addEventListener("click", e => {
-      e.stopPropagation();
-      updateViewer(currentIndex + 1);
-    });
-    imageClose.addEventListener("click", closeImage);
-    imageModal.addEventListener("click", e => {
-      if (e.target === imageModal) closeImage();
-    });
-
-    // Modal de videos de Facebook
-    const reelModal = document.getElementById("reelModal");
-    const frame = reelModal.querySelector("iframe");
-    const closeBtn = reelModal.querySelector(".close");
-
-    function closeModal() {
-      reelModal.classList.remove("open");
-      frame.src = "";
-      document.body.style.overflow = "";
-    }
-
-    document.querySelectorAll(".play").forEach(btn => btn.addEventListener("click", () => {
-      const src = "https://www.facebook.com/plugins/video.php?href=" + encodeURIComponent(btn.dataset.reel) + "&show_text=false&width=500";
-      frame.src = src;
-      reelModal.classList.add("open");
-      document.body.style.overflow = "hidden";
-      closeBtn.focus();
-    }));
-
-    closeBtn.addEventListener("click", closeModal);
-    reelModal.addEventListener("click", e => {
-      if (e.target === reelModal) closeModal();
-    });
-
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape") {
-        closeModal();
-        closeImage();
-      } else if (imageModal.classList.contains("open")) {
-        if (e.key === "ArrowLeft") updateViewer(currentIndex - 1);
-        if (e.key === "ArrowRight") updateViewer(currentIndex + 1);
-      }
-    });
-
-    // Aparición suave al hacer scroll
-    const io = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add("in");
-        io.unobserve(e.target);
-      }
-    }), { threshold: 0.1 });
-    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox-close" type="button" aria-label="Cerrar">×</button>
+    <button class="lightbox-nav prev" type="button" aria-label="Imagen anterior">←</button>
+    <figure>
+      <img src="" alt="">
+      <figcaption>
+        <span></span>
+        <strong></strong>
+        <p></p>
+        <a class="lightbox-wa" href="#" target="_blank" rel="noopener">Cotizar un diseño similar por WhatsApp ↗</a>
+      </figcaption>
+    </figure>
+    <button class="lightbox-nav next" type="button" aria-label="Imagen siguiente">→</button>
+  </dialog>
 </body>
 </html>
